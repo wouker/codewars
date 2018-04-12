@@ -19,20 +19,22 @@ namespace TheCode
             for (int i = 0; i < integers.Length && !result.HasValue; i++)
             {
                 int currInteger = integers[i];
-                if(currInteger % 2 ==0)
+                if (currInteger % 2 == 0)
                     evens.Add(currInteger);
-                else 
+                else
                     odds.Add(currInteger);
 
                 if (evens.Count > 1)
                 {
                     //N is odd
                     result = odds.Any() ? odds[0] : FindParity(integers, false);
-                } else if (odds.Count > 1)
+                }
+                else if (odds.Count > 1)
                 {
                     //N is even
                     result = evens.Any() ? evens[0] : FindParity(integers, true);
                 }
+
                 //else: we can' determine N yet
             }
 
@@ -43,5 +45,15 @@ namespace TheCode
         {
             return integers.Single(i => (i % 2 == 0) == findEven);
         }
+
+        /*
+            Best found solution:
+
+            public static int Find(int[] arr)
+            {
+                int n = arr.Take(3).Count(i => i % 2 == 0) > 1 ? 1 : 0;
+                return arr.First(i => i % 2 == n);
+            }
+         */
     }
 }
