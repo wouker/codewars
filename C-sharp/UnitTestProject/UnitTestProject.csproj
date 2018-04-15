@@ -51,6 +51,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphabetPositionTests.cs" />
     <Compile Include="ParityOutlierTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MissingLetterTests.cs" />
