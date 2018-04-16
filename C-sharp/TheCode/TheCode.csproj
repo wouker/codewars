@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AlphabetPosition.cs" />
     <Compile Include="MissingLetterFinder.cs" />
+    <Compile Include="OddSort.cs" />
     <Compile Include="ParityOutlier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
